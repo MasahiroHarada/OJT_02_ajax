@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Neko GIF</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.min.css">
+    <link rel="stylesheet" href="/public/css/styles.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/css/lightbox.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>Neko GIF</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="gif">
+                {{range .}}
+                <div class="gif-item">
+                    <div class="content">
+                        <div class="image-box">
+                            <a href="/public/img/{{.Filename}}" data-lightbox="{{.Filename}}">
+                                <img src="/public/img/{{.Filename}}" alt="">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                {{end}}
+            </div>
+            <button class="load-more">もっと見る</button>
+        </div>
+    </main>
+
+    <footer>
+        <span>Neko GIF</span>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.9.0/js/lightbox.min.js"></script>
+    <script src="/public/js/scripts.js"></script>
+
+</body>
+</html>
